@@ -26,5 +26,7 @@
   <modules>
   	<module>productAddModuleNew</module>
   	<module>registrationModuleNew</module>
+  	<module>zuulServer</module>
+  	<module>zuulServer1</module>
   </modules>
 </project>

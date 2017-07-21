@@ -1,0 +1,20 @@
+server:
+  port: 8093
+spring:
+  application:
+     name: zuul-service  # Service registers under this name
+  freemarker:
+    enabled: false           # Ignore Eureka dashboard FreeMarker templates
+  thymeleaf:
+    cache: false             # Allow Thymeleaf templates to be reloaded at runtime
+    prefix: classpath:/product-add-server/templates/    # Trailing / mandatory
+                             # Template location for this application only
+zuul:
+  routes:
+    api:
+      path: /addProduct/**
+      serviceId: PRODUCT-ADD-SERVICE
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
